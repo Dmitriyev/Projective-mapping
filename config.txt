@@ -1,0 +1,3 @@
+FIGURE = SPHERE
+COORDS = 1.0;1.0;3.5333
+PATH = "C:/Image.jpg"
