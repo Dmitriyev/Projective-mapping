@@ -19,87 +19,11 @@ public class Main implements GLEventListener {
     public static DisplayMode dm, dm_old;
     private GLU glu = new GLU();
     private float rquad = 0.0f;
-    private FIGURE figure = FIGURE.CUBE;
+    private FIGURE figure = FIGURE.SPHERE;
+    private float radius = 1.0f;
+    private int longs = 100;
+    private int lats = 100;
 
-    public void drawCube (GL2 gl) {
-        gl.glBegin(GL2.GL_QUADS); // Start Drawing The Cube
-
-        gl.glColor3f(0.9f, 0.9f, 0.9f);
-        gl.glVertex3f(1.0f, 1.0f, -1.0f); // Top Right Of The Quad (Top)
-        gl.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Left Of The Quad (Top)
-        gl.glVertex3f(-1.0f, 1.0f, 1.0f); // Bottom Left Of The Quad (Top)
-        gl.glVertex3f(1.0f, 1.0f, 1.0f); // Bottom Right Of The Quad (Top)
-
-        gl.glColor3f(0.8f, 0.8f, 0.8f);
-        gl.glVertex3f(1.0f, -1.0f, 1.0f); // Top Right Of The Quad
-        gl.glVertex3f(-1.0f, -1.0f, 1.0f); // Top Left Of The Quad
-        gl.glVertex3f(-1.0f, -1.0f, -1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(1.0f, -1.0f, -1.0f); // Bottom Right Of The Quad
-
-        gl.glColor3f(0.7f, 0.7f, 0.7f);
-        gl.glVertex3f(1.0f, 1.0f, 1.0f); // Top Right Of The Quad (Front)
-        gl.glVertex3f(-1.0f, 1.0f, 1.0f); // Top Left Of The Quad (Front)
-        gl.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(1.0f, -1.0f, 1.0f); // Bottom Right Of The Quad
-
-        gl.glColor3f(0.6f, 0.6f, 0.6f);
-        gl.glVertex3f(1.0f, -1.0f, -1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(-1.0f, -1.0f, -1.0f); // Bottom Right Of The Quad
-        gl.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Right Of The Quad (Back)
-        gl.glVertex3f(1.0f, 1.0f, -1.0f); // Top Left Of The Quad (Back)
-
-        gl.glColor3f(0.5f, 0.5f, 0.5f);
-        gl.glVertex3f(-1.0f, 1.0f, 1.0f); // Top Right Of The Quad (Left)
-        gl.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Left Of The Quad (Left)
-        gl.glVertex3f(-1.0f, -1.0f, -1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Right Of The Quad
-
-        gl.glColor3f(0.4f, 0.4f, 0.4f);
-        gl.glVertex3f(1.0f, 1.0f, -1.0f); // Top Right Of The Quad (Right)
-        gl.glVertex3f(1.0f, 1.0f, 1.0f); // Top Left Of The Quad
-        gl.glVertex3f(1.0f, -1.0f, 1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(1.0f, -1.0f, -1.0f); // Bottom Right Of The Quad
-    }
-
-    public void drawPyramid(GL2 gl) {
-        gl.glBegin(GL2.GL_QUADS); // Start Drawing The Cube
-
-        gl.glColor3f(0.9f, 0.9f, 0.9f);
-        gl.glVertex3f(1.0f, 0.5f, -1.0f); // Top Right Of The Quad (Top)
-        gl.glVertex3f(-1.0f, 0.5f, -1.0f); // Top Left Of The Quad (Top)
-        gl.glVertex3f(-1.0f, 0.5f, 1.0f); // Bottom Left Of The Quad (Top)
-        gl.glVertex3f(1.0f, 0.5f, 1.0f); // Bottom Right Of The Quad (Top)
-
-        gl.glColor3f(0.8f, 0.8f, 0.8f);
-        gl.glVertex3f(1.0f, -0.5f, 1.0f); // Top Right Of The Quad
-        gl.glVertex3f(-1.0f, -0.5f, 1.0f); // Top Left Of The Quad
-        gl.glVertex3f(-1.0f, -0.5f, -1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(1.0f, -0.5f, -1.0f); // Bottom Right Of The Quad
-
-        gl.glColor3f(0.7f, 0.7f, 0.7f);
-        gl.glVertex3f(1.0f, 0.5f, 1.0f); // Top Right Of The Quad (Front)
-        gl.glVertex3f(-1.0f, 0.5f, 1.0f); // Top Left Of The Quad (Front)
-        gl.glVertex3f(-1.0f, -0.5f, 1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(1.0f, -0.5f, 1.0f); // Bottom Right Of The Quad
-
-        gl.glColor3f(0.6f, 0.6f, 0.6f);
-        gl.glVertex3f(1.0f, -0.5f, -1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(-1.0f, -0.5f, -1.0f); // Bottom Right Of The Quad
-        gl.glVertex3f(-1.0f, 0.5f, -1.0f); // Top Right Of The Quad (Back)
-        gl.glVertex3f(1.0f, 0.5f, -1.0f); // Top Left Of The Quad (Back)
-
-        gl.glColor3f(0.5f, 0.5f, 0.5f);
-        gl.glVertex3f(-1.0f, 0.5f, 1.0f); // Top Right Of The Quad (Left)
-        gl.glVertex3f(-1.0f, 0.5f, -1.0f); // Top Left Of The Quad (Left)
-        gl.glVertex3f(-1.0f, -0.5f, -1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(-1.0f, -0.5f, 1.0f); // Bottom Right Of The Quad
-
-        gl.glColor3f(0.4f, 0.4f, 0.4f);
-        gl.glVertex3f(1.0f, 0.5f, -1.0f); // Top Right Of The Quad (Right)
-        gl.glVertex3f(1.0f, 0.5f, 1.0f); // Top Left Of The Quad
-        gl.glVertex3f(1.0f, -0.5f, 1.0f); // Bottom Left Of The Quad
-        gl.glVertex3f(1.0f, -0.5f, -1.0f); // Bottom Right Of The Quad
-    }
 
     @Override
     public void display( GLAutoDrawable drawable ) {
@@ -108,23 +32,21 @@ public class Main implements GLEventListener {
         gl.glLoadIdentity();
         gl.glTranslatef(0f, 0f, -5.0f);
         // Rotate The Cube On X, Y & Z
+        Floor.drawFloor(gl);
+        gl.glEnd(); // Done Drawing The Quad
         gl.glRotatef(rquad, 1.0f, 1.0f, 1.0f);
-
-        //gl.glEnable(gl.GL_BLEND);
-        //gl.glBlendFunc(gl.GL_SRC_ALPHA, gl.GL_ONE_MINUS_SRC_ALPHA);
-        //gl.glEnable(GL2.GL_POLYGON_SMOOTH);
-        //gl.glHint(GL2.GL_POLYGON_SMOOTH_HINT, gl.GL_NICEST);
 
         switch(figure) {
             case CUBE:
-                drawCube(gl);
+                Cube.drawCube(gl);
                 break;
 
             case PYRAMID:
-                drawPyramid(gl);
+                Pyramid.drawPyramid(gl);
                 break;
 
             case SPHERE:
+                Sphere.drawSphere(radius, longs, lats, gl);
                 break;
         }
         gl.glEnd(); // Done Drawing The Quad
@@ -142,12 +64,18 @@ public class Main implements GLEventListener {
     public void init( GLAutoDrawable drawable ) {
 
         final GL2 gl = drawable.getGL().getGL2();
-        gl.glShadeModel( GL2.GL_SMOOTH );
-        gl.glClearColor( 0f, 0f, 0f, 0f );
-        gl.glClearDepth( 1.0f );
-        gl.glEnable( GL2.GL_DEPTH_TEST );
-        gl.glDepthFunc( GL2.GL_LEQUAL );
-        gl.glHint( GL2.GL_PERSPECTIVE_CORRECTION_HINT, GL2.GL_NICEST );
+        gl.glShadeModel(GL2.GL_SMOOTH);
+        gl.glClearColor(0f, 0f, 0f, 0f);
+        gl.glClearDepth(1.0f);
+        gl.glEnable(GL2.GL_DEPTH_TEST);
+        gl.glDepthFunc(GL2.GL_LEQUAL);
+        gl.glHint(GL2.GL_PERSPECTIVE_CORRECTION_HINT, GL2.GL_NICEST);
+
+//        gl.glEnable(GL2.GL_POLYGON_SMOOTH);
+//        gl.glEnable(GL2.GL_BLEND);
+//        gl.glShadeModel(GL2.GL_SMOOTH);
+
+        Light.setLight(gl);
     }
 
     @Override
@@ -156,15 +84,15 @@ public class Main implements GLEventListener {
         // TODO Auto-generated method stub
         final GL2 gl = drawable.getGL().getGL2();
         //if( height lt; = 0 )
-        height = 400;
+        height = 300;
 
         final float h = ( float ) width / ( float ) height;
-        gl.glViewport( 0, 0, width, height );
-        gl.glMatrixMode( GL2.GL_PROJECTION );
+        gl.glViewport(0, 0, width, height);
+        gl.glMatrixMode(GL2.GL_PROJECTION);
         gl.glLoadIdentity();
 
-        glu.gluPerspective( 45.0f, h, 1.0, 20.0 );
-        gl.glMatrixMode( GL2.GL_MODELVIEW );
+        glu.gluPerspective(45.0f, h, 1.0, 100.0);
+        gl.glMatrixMode(GL2.GL_MODELVIEW);
         gl.glLoadIdentity();
     }
 
