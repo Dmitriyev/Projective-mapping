@@ -1,7 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9cdd1d3-8854-492f-a3c7-dc2f1912fbe0" name="Default" comment="" />
+    <list default="true" id="9a65d616-1ae0-49a6-8199-07b8021b2ca1" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libjogl.jnilib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libjogl_awt.jnilib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libjogl_cg.jnilib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/ArcBall.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/Matrix4f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/Point2f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/Quat4f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/company/Vector3f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/._.DS_Store" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/common/BitmapLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/common/ExceptionHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/common/GLDisplay.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/common/HelpOverlay.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/common/ResourceRetriever.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/common/TextureReader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/._.DS_Store" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson01/Lesson01.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson01/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson02/Lesson02.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson02/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson03/Lesson03.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson03/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson04/Lesson04.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson04/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson05/Lesson05.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson05/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson06/Lesson06.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson06/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson07/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson07/Lesson07.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson07/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson08/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson08/Lesson08.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson08/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson09/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson09/Lesson09.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson09/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson10/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson10/Lesson10.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson10/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson11/Lesson11.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson11/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson12/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson12/Lesson12.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson12/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson13/Lesson13.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson13/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson14/Lesson14.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson14/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson15/GLF.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson15/Lesson15.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson15/LittleEndianInputStream.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson15/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson16/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson16/Lesson16.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson16/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson17/Lesson17.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson17/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson18/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson18/Lesson18.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson18/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson19/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson19/Lesson19.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson19/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson20/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson20/Lesson20.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson20/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson21/AudioSample.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson21/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson21/Lesson21.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson21/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson22/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson22/Lesson22.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson22/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson23/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson23/Lesson23.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson23/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson24/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson24/Lesson24.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson24/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson25/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson25/Lesson25.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson25/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson26/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson26/Lesson26.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson26/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson27/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson27/Lesson27.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson27/Object3D.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson27/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson28/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson28/Lesson28.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson28/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson29/Lesson29.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson29/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson30/AudioSample.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson30/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson30/Lesson30.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson30/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson30/math/Matrix4f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson30/math/Tuple3d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson30/math/Tuple3f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson33/Lesson33.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson33/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson33/TGA.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson33/TGAHeader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson33/TGALoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson33/Texture.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson34/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson34/Lesson34.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson34/RenderMode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson34/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson36/Lesson36.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson36/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson37/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson37/Lesson37.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson37/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/ConstantVelocity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/Lesson39.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/Mass.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/MassConnectedWithSpring.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/MotionUnderGravitation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/Simulation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson39/Vector3D.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson42/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson42/Lesson42.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson42/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson44/Camera.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson44/Font.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson44/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson44/Lesson44.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson44/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson44/Tuple3f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson45/Lesson45.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson45/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson47/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson47/Lesson47.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson47/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson48/ArcBall.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson48/InputHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson48/Lesson48.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson48/Matrix4f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson48/Point2f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson48/Quat4f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson48/Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/demos/nehe/lesson48/Vector3f.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projective-mapping.iml" afterPath="$PROJECT_DIR$/Projective-mapping.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
+    </list>
     <ignored path="Projective-mapping.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,7 +177,18 @@
     <favorites_list name="Projective-mapping" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Lesson48.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/figure/Lesson48.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.22442244">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,7 +201,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1924" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -63,6 +229,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -71,11 +240,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projective-mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projective-mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projective-mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projective-mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="figure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projective-mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projective-mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -83,7 +295,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -170,47 +382,66 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="false" name="Unnamed" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="figure.Lesson48" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Projective-mapping" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b9cdd1d3-8854-492f-a3c7-dc2f1912fbe0" name="Default" comment="" />
-      <created>1455837947938</created>
+      <changelist id="9a65d616-1ae0-49a6-8199-07b8021b2ca1" name="Default" comment="" />
+      <created>1456072046545</created>
       <option name="number" value="Default" />
-      <updated>1455837947938</updated>
-      <workItem from="1455837951251" duration="127000" />
+      <updated>1456072046545</updated>
+      <workItem from="1456072049014" duration="37000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127000" />
+    <option name="totallyTimeSpent" value="37000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -225,18 +456,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/FIGURE.java">
+    <entry file="file://$PROJECT_DIR$/src/figure/Lesson48.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7392739">
-          <caret line="147" column="28" selection-start-line="147" selection-start-column="28" selection-end-line="147" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.22442244">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>

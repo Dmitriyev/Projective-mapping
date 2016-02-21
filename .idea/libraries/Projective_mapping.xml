@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Projective-mapping">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gluegen-rt-2.0-rc11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jogl-all-2.0-rc11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/gluegen-rt-2.0-rc11-natives-windows-amd64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jogl-all.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jogl-all-2.0-rc11-natives-windows-amd64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/gluegen-rt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
