@@ -151,7 +151,7 @@ public class FiguresUI extends javax.swing.JFrame {
         int numEdges;
         try {
             numEdges = Integer.parseInt(edges);
-            if (numEdges <1 ) throw new Exception();
+            if (numEdges <2 ) throw new Exception();
             Main.lats = numEdges;
             Main.longs = numEdges;
         } catch (Exception e) {

@@ -15,7 +15,6 @@ import javax.swing.JFrame;
 
 import com.jogamp.opengl.util.FPSAnimator;
 import gui.FiguresUI;
-import gui.WindowGUI;
 
 public class Main implements GLEventListener {
 
@@ -116,16 +115,11 @@ public class Main implements GLEventListener {
 
         glcanvas.addGLEventListener( cube );
         glcanvas.setSize( 400, 400 );
-/*
-        final JFrame frame = new JFrame ( " Multicolored cube" );
-        frame.getContentPane().add( glcanvas );
-        frame.setSize( frame.getContentPane().getPreferredSize() );
-        frame.setVisible( true );*/
+
         final FPSAnimator animator = new FPSAnimator(glcanvas, 300,true);
-    //    WindowGUI gui = new WindowGUI(glcanvas);
-    FiguresUI tmp = new FiguresUI(glcanvas);
-    //tmp.setVisible(true);
-   // tmp.getContentPane().add(glcanvas);
+
+        FiguresUI figUI = new FiguresUI(glcanvas);
+
         animator.start();
     }
 
