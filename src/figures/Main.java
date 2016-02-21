@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 
 import com.jogamp.opengl.util.FPSAnimator;
 import gui.FiguresUI;
+import java.io.File;
 
 public class Main implements GLEventListener {
 
@@ -26,7 +27,7 @@ public class Main implements GLEventListener {
     private float radius = 1.0f;
     public static int longs = 100;
     public static int lats = 100;
-
+    public static File projectorFile;
     public FIGURE getFigure() {
         return figure;
     }
