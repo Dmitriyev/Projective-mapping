@@ -84,7 +84,7 @@ public class Main implements GLEventListener {
         // TODO Auto-generated method stub
         final GL2 gl = drawable.getGL().getGL2();
         //if( height lt; = 0 )
-        height = 300;
+        height = 700;
 
         final float h = ( float ) width / ( float ) height;
         gl.glViewport(0, 0, width, height);
