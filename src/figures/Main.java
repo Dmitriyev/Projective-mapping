@@ -8,6 +8,7 @@ import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLEventListener;
 import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.awt.GLCanvas;
+import static com.jogamp.opengl.fixedfunc.GLMatrixFunc.GL_PROJECTION;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.glu.GLUquadric;
 
@@ -15,6 +16,8 @@ import javax.swing.JFrame;
 
 import com.jogamp.opengl.util.FPSAnimator;
 import gui.FiguresUI;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 import java.io.File;
 
 public class Main implements GLEventListener {
@@ -28,12 +31,9 @@ public class Main implements GLEventListener {
     public static int longs = 100;
     public static int lats = 100;
     public static File projectorFile;
-    public FIGURE getFigure() {
-        return figure;
-    }
-    public void setFigure(FIGURE newFigure) {
-        figure = newFigure;
-    }
+    
+    public static float scale = 1.0f;
+
     @Override
     public void display( GLAutoDrawable drawable ) {
         final GL2 gl = drawable.getGL().getGL2();
@@ -41,10 +41,11 @@ public class Main implements GLEventListener {
         gl.glLoadIdentity();
         gl.glTranslatef(0f, 0f, -5.0f);
         // Rotate The Cube On X, Y & Z
+        gl.glScalef(scale, scale, scale);
         Floor.drawFloor(gl);
         gl.glEnd(); // Done Drawing The Quad
         gl.glRotatef(rquad, 1.0f, 1.0f, 1.0f);
-
+        
         switch(figure) {
             case CUBE:
                 Cube.drawCube(gl);
@@ -60,7 +61,7 @@ public class Main implements GLEventListener {
         }
         gl.glEnd(); // Done Drawing The Quad
         gl.glFlush();
-
+        
         rquad -= 0.15f;
     }
 
@@ -113,7 +114,16 @@ public class Main implements GLEventListener {
         // The canvas
         final GLCanvas glcanvas = new GLCanvas( capabilities );
         Main cube = new Main();
-
+        glcanvas.addMouseWheelListener(new MouseWheelListener () {
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent e) {
+                if (e.getWheelRotation()==1) {
+                    scale += 0.1f;                   
+                } else {
+                    scale -=0.1f;
+                }
+            }
+        });
         glcanvas.addGLEventListener( cube );
         glcanvas.setSize( 400, 400 );
 
