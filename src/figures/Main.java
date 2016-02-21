@@ -1,3 +1,5 @@
+package figures;
+
 import java.awt.DisplayMode;
 
 import com.jogamp.opengl.GL2;
@@ -12,19 +14,26 @@ import com.jogamp.opengl.glu.GLUquadric;
 import javax.swing.JFrame;
 
 import com.jogamp.opengl.util.FPSAnimator;
+import gui.FiguresUI;
+import gui.WindowGUI;
 
 public class Main implements GLEventListener {
 
-
+    
     public static DisplayMode dm, dm_old;
     private GLU glu = new GLU();
     private float rquad = 0.0f;
-    private FIGURE figure = FIGURE.SPHERE;
+    public static FIGURE figure = FIGURE.SPHERE;
     private float radius = 1.0f;
-    private int longs = 100;
-    private int lats = 100;
+    public static int longs = 100;
+    public static int lats = 100;
 
-
+    public FIGURE getFigure() {
+        return figure;
+    }
+    public void setFigure(FIGURE newFigure) {
+        figure = newFigure;
+    }
     @Override
     public void display( GLAutoDrawable drawable ) {
         final GL2 gl = drawable.getGL().getGL2();
@@ -107,13 +116,16 @@ public class Main implements GLEventListener {
 
         glcanvas.addGLEventListener( cube );
         glcanvas.setSize( 400, 400 );
-
+/*
         final JFrame frame = new JFrame ( " Multicolored cube" );
         frame.getContentPane().add( glcanvas );
         frame.setSize( frame.getContentPane().getPreferredSize() );
-        frame.setVisible( true );
+        frame.setVisible( true );*/
         final FPSAnimator animator = new FPSAnimator(glcanvas, 300,true);
-
+    //    WindowGUI gui = new WindowGUI(glcanvas);
+    FiguresUI tmp = new FiguresUI(glcanvas);
+    //tmp.setVisible(true);
+   // tmp.getContentPane().add(glcanvas);
         animator.start();
     }
 

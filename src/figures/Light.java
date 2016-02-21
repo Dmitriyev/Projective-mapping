@@ -1,3 +1,5 @@
+package figures;
+
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.fixedfunc.GLLightingFunc;
 
