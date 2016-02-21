@@ -2,19 +2,14 @@ package figures;
 
 import java.awt.DisplayMode;
 
-import com.jogamp.opengl.GL2;
-import com.jogamp.opengl.GLAutoDrawable;
-import com.jogamp.opengl.GLCapabilities;
-import com.jogamp.opengl.GLEventListener;
-import com.jogamp.opengl.GLProfile;
+import com.jogamp.opengl.*;
 import com.jogamp.opengl.awt.GLCanvas;
 import static com.jogamp.opengl.fixedfunc.GLMatrixFunc.GL_PROJECTION;
 import com.jogamp.opengl.glu.GLU;
-import com.jogamp.opengl.glu.GLUquadric;
-
-import javax.swing.JFrame;
 
 import com.jogamp.opengl.util.FPSAnimator;
+import com.jogamp.opengl.util.glsl.ShaderCode;
+import com.jogamp.opengl.util.glsl.ShaderProgram;
 import gui.FiguresUI;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
@@ -31,7 +26,7 @@ public class Main implements GLEventListener {
     public static int longs = 100;
     public static int lats = 100;
     public static File projectorFile;
-    
+   
     public static float scale = 1.0f;
 
     @Override
@@ -86,6 +81,14 @@ public class Main implements GLEventListener {
 //        gl.glShadeModel(GL2.GL_SMOOTH);
 
         Light.setLight(gl);
+
+        final ShaderCode vp0 = ShaderCode.create(gl, GL2ES2.GL_VERTEX_SHADER, this.getClass(), "shader", "src/shader", "vp0.vert", true);
+        final ShaderCode fp0 = ShaderCode.create(gl, GL2ES2.GL_FRAGMENT_SHADER, this.getClass(), "shader", "src/shader", "fp0.frag", true);
+        vp0.defaultShaderCustomization(gl, true, true);
+        fp0.defaultShaderCustomization(gl, true, true);
+        final ShaderProgram sp0 = new ShaderProgram();
+        sp0.add(gl, vp0, System.err);
+        sp0.add(gl, fp0, System.err);
     }
 
     @Override
@@ -133,5 +136,4 @@ public class Main implements GLEventListener {
 
         animator.start();
     }
-
 }
