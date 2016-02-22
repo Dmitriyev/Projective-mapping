@@ -19,7 +19,7 @@ public class Renderer implements GLEventListener {
     private GLUquadric quadratic;                                            // Used For Our Quadric
     private GLU glu = new GLU();
 
-    public static FIGURE figure = FIGURE.SPHERE;
+    public static FIGURE figure = FIGURE.CUBE;
     private float radius = 1.0f;
     public static int longs = 100;
     public static int lats = 100;

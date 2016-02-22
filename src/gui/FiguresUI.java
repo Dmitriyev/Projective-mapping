@@ -100,7 +100,7 @@ public class FiguresUI extends javax.swing.JFrame {
             }
         });
 
-        sphereParamsLabel.setText("Параметры граней");
+        sphereParamsLabel.setText("Число граней");
 
         sphereParams.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,51 +151,56 @@ public class FiguresUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(projectorFile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addGap(95, 95, 95))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(selectFigureLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(sphereParamsLabel)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(sphereParams, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3))
+                            .addComponent(pyramidBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cubeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(76, 76, 76))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(configuration)
-                            .addComponent(newSphereBtn)
-                            .addComponent(sphereParamsLabel)
-                            .addComponent(sphereParams, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(selectFigureLabel)
-                            .addComponent(projectorCoords)
-                            .addComponent(cubeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pyramidBtn)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(zCoordLabel)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(zCoord))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(yCoordLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(xCoordLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(xCoord, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                                        .addComponent(yCoord))))
-                            .addComponent(projectorFileBtn)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(byHands, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(ProjectorSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(configuration)
+                                    .addComponent(newSphereBtn)
+                                    .addComponent(projectorCoords)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                            .addComponent(zCoordLabel)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(zCoord))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(yCoordLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(xCoordLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(xCoord, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                                                .addComponent(yCoord))))
+                                    .addComponent(projectorFileBtn)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(byHands, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(ProjectorSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel6)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(projectorFile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(selectFigureLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cubeBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(1, 1, 1)
                 .addComponent(pyramidBtn)
                 .addGap(36, 36, 36)
                 .addComponent(sphereParamsLabel)
@@ -242,8 +247,8 @@ public class FiguresUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 613, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 1141, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,33 +260,13 @@ public class FiguresUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cubeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cubeBtnActionPerformed
-        Renderer.figure = FIGURE.CUBE;
-    }//GEN-LAST:event_cubeBtnActionPerformed
+    private void byHandsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byHandsActionPerformed
+        setVisibleConfig(true);
+    }//GEN-LAST:event_byHandsActionPerformed
 
-    private void newSphereBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newSphereBtnActionPerformed
-        Renderer.figure = FIGURE.SPHERE;
-        String edges = sphereParams.getText();
-        int numEdges;
-        try {
-            numEdges = Integer.parseInt(edges);
-            if (numEdges < 2) {
-                throw new Exception();
-            }
-            Renderer.lats = numEdges;
-            Renderer.longs = numEdges;
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Введите положительное число");
-        }
-    }//GEN-LAST:event_newSphereBtnActionPerformed
-
-    private void pyramidBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pyramidBtnActionPerformed
-        Renderer.figure = FIGURE.PYRAMID;
-    }//GEN-LAST:event_pyramidBtnActionPerformed
-
-    private void sphereParamsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sphereParamsActionPerformed
-
-    }//GEN-LAST:event_sphereParamsActionPerformed
+    private void configurationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configurationActionPerformed
+        setVisibleConfig(false);
+    }//GEN-LAST:event_configurationActionPerformed
 
     private void projectorFileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_projectorFileBtnActionPerformed
         boolean isByHands = buttonGroup1.isSelected(byHands.getModel());
@@ -293,24 +278,43 @@ public class FiguresUI extends javax.swing.JFrame {
                 Renderer.zProjectorCoord = Integer.parseInt(zCoord.getText());
 
                 Renderer.configFile = chooseFile.selectFile();
-                    System.out.println(Renderer.configFile);
-                
+                System.out.println(Renderer.configFile);
+
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Введите корректные координаты");
             }
         } else {
             Renderer.projectorFile = chooseFile.selectFile();
         }
-
     }//GEN-LAST:event_projectorFileBtnActionPerformed
 
-    private void configurationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configurationActionPerformed
-        setVisibleConfig(false);
-    }//GEN-LAST:event_configurationActionPerformed
+    private void sphereParamsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sphereParamsActionPerformed
 
-    private void byHandsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byHandsActionPerformed
-        setVisibleConfig(true);
-    }//GEN-LAST:event_byHandsActionPerformed
+    }//GEN-LAST:event_sphereParamsActionPerformed
+
+    private void pyramidBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pyramidBtnActionPerformed
+        Renderer.figure = FIGURE.PYRAMID;
+    }//GEN-LAST:event_pyramidBtnActionPerformed
+
+    private void newSphereBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newSphereBtnActionPerformed
+        String edges = sphereParams.getText();
+        int numEdges;
+        try {
+            numEdges = Integer.parseInt(edges);
+            if (numEdges < 40) {
+                throw new Exception();
+            }
+            Renderer.lats = (int)Math.sqrt(numEdges);
+            Renderer.longs = (int)Math.sqrt(numEdges);
+            Renderer.figure = FIGURE.SPHERE;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Введите число граней больше 40");
+        }
+    }//GEN-LAST:event_newSphereBtnActionPerformed
+
+    private void cubeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cubeBtnActionPerformed
+        Renderer.figure = FIGURE.CUBE;
+    }//GEN-LAST:event_cubeBtnActionPerformed
 
     private void setVisibleConfig(boolean isVisible) {
         projectorCoords.setVisible(isVisible);
