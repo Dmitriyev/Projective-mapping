@@ -268,8 +268,9 @@ public class FiguresUI extends javax.swing.JFrame {
             if (numEdges < 2) {
                 throw new Exception();
             }
-            Renderer.lats = numEdges;
-            Renderer.longs = numEdges;
+            
+            Renderer.lats = (int)Math.sqrt(numEdges);
+            Renderer.longs = (int)Math.sqrt(numEdges);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Введите положительное число");
         }
