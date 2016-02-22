@@ -164,7 +164,8 @@ public class Renderer implements GLEventListener {
         gl.glPushMatrix();                                                    // NEW: Prepare Dynamic Transform
         gl.glMultMatrixf(matrix, 0);                                        // NEW: Apply Dynamic Transform
         Floor.drawFloor(gl);
-        gl.glColor3f(0.75f, 0.75f, 1.0f);
+        gl.glEnd();
+        gl.glColor3f(0.45f, 0.45f, 0.45f);
         switch(figure) {
             case CUBE:
                 Cube.drawCube(gl);
@@ -186,7 +187,7 @@ public class Renderer implements GLEventListener {
         gl.glMultMatrixf(matrix, 0);                                        // NEW: Apply Dynamic Transform
         gl.glColor3f(1.0f, 0.75f, 0.75f);
         gl.glPopMatrix();                                                    // NEW: Unapply Dynamic Transform
-
+        gl.glEnd();
         gl.glFlush();                                                        // Flush The GL Rendering Pipeline
     }
 }
