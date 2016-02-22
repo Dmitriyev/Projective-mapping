@@ -31,6 +31,7 @@ public class Main implements GLEventListener {
     public static int xProjectorCoord = 5;
     public static int yProjectorCoord = 5;
     public static int zProjectorCoord = 5;
+    private static int wheelCount = 0;
     @Override
     public void display( GLAutoDrawable drawable ) {
         final GL2 gl = drawable.getGL().getGL2();
@@ -118,13 +119,15 @@ public class Main implements GLEventListener {
 
         // The canvas
         final GLCanvas glcanvas = new GLCanvas( capabilities );
-        Main cube = new Main();
+        Main cube = new Main();       
         glcanvas.addMouseWheelListener(new MouseWheelListener () {
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
-                if (e.getWheelRotation()==1) {
+                if (e.getWheelRotation()==1 && wheelCount < 4) {
+                    wheelCount++;
                     scale -= 0.1f;                   
-                } else {
+                } else if (e.getWheelRotation()==-1 && wheelCount >= -20){
+                    wheelCount--;
                     scale +=0.1f;
                 }
             }
