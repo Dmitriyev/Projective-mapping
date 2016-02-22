@@ -26,9 +26,11 @@ public class Main implements GLEventListener {
     public static int longs = 100;
     public static int lats = 100;
     public static File projectorFile;
-   
+    public static File configFile;
     public static float scale = 1.0f;
-
+    public static int xProjectorCoord = 5;
+    public static int yProjectorCoord = 5;
+    public static int zProjectorCoord = 5;
     @Override
     public void display( GLAutoDrawable drawable ) {
         final GL2 gl = drawable.getGL().getGL2();
@@ -81,14 +83,14 @@ public class Main implements GLEventListener {
 //        gl.glShadeModel(GL2.GL_SMOOTH);
 
         Light.setLight(gl);
-
+/*
         final ShaderCode vp0 = ShaderCode.create(gl, GL2ES2.GL_VERTEX_SHADER, this.getClass(), "shader", "src/shader", "vp0.vert", true);
         final ShaderCode fp0 = ShaderCode.create(gl, GL2ES2.GL_FRAGMENT_SHADER, this.getClass(), "shader", "src/shader", "fp0.frag", true);
         vp0.defaultShaderCustomization(gl, true, true);
         fp0.defaultShaderCustomization(gl, true, true);
         final ShaderProgram sp0 = new ShaderProgram();
         sp0.add(gl, vp0, System.err);
-        sp0.add(gl, fp0, System.err);
+        sp0.add(gl, fp0, System.err);*/
     }
 
     @Override
@@ -121,9 +123,9 @@ public class Main implements GLEventListener {
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
                 if (e.getWheelRotation()==1) {
-                    scale += 0.1f;                   
+                    scale -= 0.1f;                   
                 } else {
-                    scale -=0.1f;
+                    scale +=0.1f;
                 }
             }
         });

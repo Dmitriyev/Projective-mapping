@@ -13,6 +13,7 @@ import figures.FIGURE;
 import figures.Main;
 import java.io.File;
 import javax.swing.JFileChooser;
+import utils.FileChooser;
 
 /**
  *
@@ -40,59 +41,99 @@ public class FiguresUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        cubeBtn = new javax.swing.JButton();
+        selectFigureLabel = new javax.swing.JLabel();
+        newSphereBtn = new javax.swing.JButton();
+        pyramidBtn = new javax.swing.JButton();
+        sphereParamsLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        sphereParams = new javax.swing.JTextField();
+        projectorFileBtn = new javax.swing.JButton();
+        projectorFile = new javax.swing.JLabel();
+        ProjectorSettings = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        configuration = new javax.swing.JRadioButton();
+        byHands = new javax.swing.JRadioButton();
+        projectorCoords = new javax.swing.JLabel();
+        xCoordLabel = new javax.swing.JLabel();
+        xCoord = new javax.swing.JFormattedTextField();
+        yCoordLabel = new javax.swing.JLabel();
+        zCoordLabel = new javax.swing.JLabel();
+        yCoord = new javax.swing.JTextField();
+        zCoord = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1300, 1000));
 
-        jButton1.setText("Куб");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cubeBtn.setText("Куб");
+        cubeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cubeBtnActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Выберите фигуру");
+        selectFigureLabel.setText("Выберите фигуру");
 
-        jButton2.setText("Новая Сфера");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        newSphereBtn.setText("Новая Сфера");
+        newSphereBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                newSphereBtnActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Пирамида");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        pyramidBtn.setText("Пирамида");
+        pyramidBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                pyramidBtnActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Параметры граней");
+        sphereParamsLabel.setText("Параметры граней");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        sphereParams.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                sphereParamsActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Выбрать");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        projectorFileBtn.setText("Выбрать");
+        projectorFileBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                projectorFileBtnActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("Файл для проектора:");
+        projectorFile.setText("Файл для проектора:");
+
+        ProjectorSettings.setText("Настройки проектора:");
+
+        buttonGroup1.add(configuration);
+        configuration.setText("Конфигурация");
+        configuration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                configurationActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(byHands);
+        byHands.setSelected(true);
+        byHands.setText("Задать вручную");
+        byHands.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                byHandsActionPerformed(evt);
+            }
+        });
+
+        projectorCoords.setText("Координаты проектора:");
+
+        xCoordLabel.setText("x");
+
+        yCoordLabel.setText("y");
+
+        zCoordLabel.setText("z");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -101,49 +142,90 @@ public class FiguresUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton3)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(projectorFile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel3)
+                        .addGap(95, 95, 95))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(95, 95, 95))
-                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(configuration)
+                            .addComponent(newSphereBtn)
+                            .addComponent(sphereParamsLabel)
+                            .addComponent(sphereParams, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(selectFigureLabel)
+                            .addComponent(projectorCoords)
+                            .addComponent(cubeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pyramidBtn)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(zCoordLabel)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(zCoord))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(yCoordLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(xCoordLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(xCoord, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                                        .addComponent(yCoord))))
+                            .addComponent(projectorFileBtn)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(byHands, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ProjectorSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(selectFigureLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(cubeBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(pyramidBtn)
                 .addGap(36, 36, 36)
-                .addComponent(jLabel2)
+                .addComponent(sphereParamsLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sphereParams, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addGap(65, 65, 65)
-                .addComponent(jLabel4)
+                .addComponent(newSphereBtn)
+                .addGap(47, 47, 47)
+                .addComponent(ProjectorSettings)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addComponent(configuration)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(byHands)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(projectorCoords)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(xCoordLabel)
+                    .addComponent(xCoord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(yCoordLabel)
+                    .addComponent(yCoord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(zCoordLabel)
+                    .addComponent(zCoord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(projectorFile)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(projectorFileBtn)
+                .addContainerGap(563, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,7 +233,7 @@ public class FiguresUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 617, Short.MAX_VALUE)
+                .addGap(0, 613, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -164,14 +246,13 @@ public class FiguresUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cubeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cubeBtnActionPerformed
         Main.figure = FIGURE.CUBE;
-        Main main = new Main();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cubeBtnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void newSphereBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newSphereBtnActionPerformed
         Main.figure = FIGURE.SPHERE;
-        String edges = jTextField1.getText();
+        String edges = sphereParams.getText();
         int numEdges;
         try {
             numEdges = Integer.parseInt(edges);
@@ -183,40 +264,80 @@ public class FiguresUI extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Введите положительное число");
         }
-        Main main = new Main();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_newSphereBtnActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void pyramidBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pyramidBtnActionPerformed
         Main.figure = FIGURE.PYRAMID;
-        Main main = new Main();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_pyramidBtnActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void sphereParamsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sphereParamsActionPerformed
 
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_sphereParamsActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        JFileChooser fileopen = new JFileChooser();
-        int ret = fileopen.showDialog(null, "Выберите файл");
-        if (ret == JFileChooser.APPROVE_OPTION) {
-            File file = fileopen.getSelectedFile();
-            Main.projectorFile = file;
+    private void projectorFileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_projectorFileBtnActionPerformed
+        boolean isByHands = buttonGroup1.isSelected(byHands.getModel());
+        FileChooser chooseFile = new FileChooser();
+        if (isByHands) {
+            try {
+                Main.xProjectorCoord = Integer.parseInt(xCoord.getText());
+                Main.yProjectorCoord = Integer.parseInt(yCoord.getText());
+                Main.zProjectorCoord = Integer.parseInt(zCoord.getText());
+                
+                    Main.configFile = chooseFile.selectFile();
+                    System.out.println(Main.configFile);
+                
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Введите корректные координаты");
+            }
+        } else {
+            Main.projectorFile = chooseFile.selectFile();
         }
-        System.out.println(Main.projectorFile.getName());
-        Main main = new Main();
-    }//GEN-LAST:event_jButton4ActionPerformed
 
+    }//GEN-LAST:event_projectorFileBtnActionPerformed
+
+    private void configurationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configurationActionPerformed
+        setVisibleConfig(false);
+    }//GEN-LAST:event_configurationActionPerformed
+
+    private void byHandsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byHandsActionPerformed
+        setVisibleConfig(true);
+    }//GEN-LAST:event_byHandsActionPerformed
+
+    private void setVisibleConfig(boolean isVisible) {
+        projectorCoords.setVisible(isVisible);
+        xCoordLabel.setVisible(isVisible);
+        yCoordLabel.setVisible(isVisible);
+        zCoordLabel.setVisible(isVisible);
+        xCoord.setVisible(isVisible);
+        yCoord.setVisible(isVisible);
+        zCoord.setVisible(isVisible);
+        projectorFile.setVisible(isVisible);
+        projectorCoords.setVisible(isVisible);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel ProjectorSettings;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JRadioButton byHands;
+    private javax.swing.JRadioButton configuration;
+    private javax.swing.JButton cubeBtn;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton newSphereBtn;
+    private javax.swing.JLabel projectorCoords;
+    private javax.swing.JLabel projectorFile;
+    private javax.swing.JButton projectorFileBtn;
+    private javax.swing.JButton pyramidBtn;
+    private javax.swing.JLabel selectFigureLabel;
+    private javax.swing.JTextField sphereParams;
+    private javax.swing.JLabel sphereParamsLabel;
+    private javax.swing.JFormattedTextField xCoord;
+    private javax.swing.JLabel xCoordLabel;
+    private javax.swing.JTextField yCoord;
+    private javax.swing.JLabel yCoordLabel;
+    private javax.swing.JTextField zCoord;
+    private javax.swing.JLabel zCoordLabel;
     // End of variables declaration//GEN-END:variables
 }
