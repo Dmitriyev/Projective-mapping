@@ -158,21 +158,13 @@ public class Renderer implements GLEventListener {
 
         // Rotate The Cube On X, Y & Z
         gl.glLoadIdentity();                                                // Reset The Current Modelview Matrix
-        // gl.glTranslatef(-1.5f, 0.0f, -6.0f);                                    // Move Left 1.5 Units And Into The Screen 6.0
 
         gl.glTranslatef(0f, 0f, -6.0f);
         gl.glScalef(GLDisplay.scale, GLDisplay.scale, GLDisplay.scale);
         gl.glPushMatrix();                                                    // NEW: Prepare Dynamic Transform
         gl.glMultMatrixf(matrix, 0);                                        // NEW: Apply Dynamic Transform
         Floor.drawFloor(gl);
-          gl.glColor3f(0.75f, 0.75f, 1.0f);
-        // Pyramid.drawPyramid(gl);
-       /* GLUT glut = new GLUT();
-        glut.glutSolidCube(1.0f);*/
-        //torus(gl, 0.30f, 1.00f);
-        //   Sphere.drawSphere(1.0f,10,10,gl);
-        //  Cube.drawCube(gl);
-
+        gl.glColor3f(0.75f, 0.75f, 1.0f);
         switch(figure) {
             case CUBE:
                 Cube.drawCube(gl);
@@ -186,11 +178,9 @@ public class Renderer implements GLEventListener {
                 Sphere.drawSphere(radius, longs, lats, gl);
                 break;
         }
-     //   glu.gluSphere(quadratic, 1.3f, 20, 20);
         gl.glPopMatrix();                                                    // NEW: Unapply Dynamic Transform
 
         gl.glLoadIdentity();                                                // Reset The Current Modelview Matrix
-        // gl.glTranslatef(1.5f, 0.0f, -6.0f);                                    // Move Right 1.5 Units And Into The Screen 7.0
 
         gl.glPushMatrix();                                                    // NEW: Prepare Dynamic Transform
         gl.glMultMatrixf(matrix, 0);                                        // NEW: Apply Dynamic Transform
