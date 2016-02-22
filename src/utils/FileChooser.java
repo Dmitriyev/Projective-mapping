@@ -5,7 +5,6 @@
  */
 package utils;
 
-import figures.Main;
 import java.io.File;
 import javax.swing.JFileChooser;
 
