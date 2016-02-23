@@ -364,7 +364,6 @@ public class FiguresUI extends javax.swing.JFrame {
         ProjectiveTextureMapping ptm = new ProjectiveTextureMapping();
         FileChooser chooseFile = new FileChooser();
         if (isByHands) {
-            System.out.println(chooseFile.selectFile().getName());
             ptm.setTexture(chooseFile.selectFile(),Renderer.glOut);
             try {
                 ptm.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
