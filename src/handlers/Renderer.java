@@ -165,7 +165,7 @@ public class Renderer implements GLEventListener {
         //Два метода задания начальной точки
 
         glu.gluPerspective(45, widthHeightRatio, 1, 1000); // через углы
-        glu.gluLookAt(0, 0, distance, 0, 0, 0, 0, 1, 0); // через точки
+        glu.gluLookAt(10, 10, distance, 0, 0, 0, 0, 1, 0); // через точки
         // Change back to model view matrix.
         gl.glMatrixMode(GL2.GL_MODELVIEW);
         gl.glLoadIdentity();
@@ -176,7 +176,7 @@ public class Renderer implements GLEventListener {
         }
 
         GL2 gl = drawable.getGL().getGL2();
-      //  setCamera(gl,glu, 10);
+        setCamera(gl,glu, 10);
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);                // Clear Screen And Depth Buffer
 
         // Rotate The Cube On X, Y & Z
