@@ -7,6 +7,7 @@ import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.glu.GLUquadric;
 import display.GLDisplay;
 import figures.*;
+import gui.FiguresUI;
 
 import java.awt.*;
 import java.io.File;
@@ -76,7 +77,7 @@ public class Renderer implements GLEventListener {
         glu.gluQuadricNormals(quadratic, GLU.GLU_SMOOTH);                        // Create Smooth Normals
         glu.gluQuadricTexture(quadratic, true);                            // Create Texture Coords
 
-        Light.setLight(gl);
+        Light.setLight(gl,10,10,10,0);
         gl.glEnable(GL2.GL_COLOR_MATERIAL);                                    // Enable Color Material
         //    Floor.drawFloor(gl);
 
@@ -152,22 +153,36 @@ public class Renderer implements GLEventListener {
         }
         gl.glEnd();                                                        // Done Torus
     }
+    private void setCamera(GL2 gl, GLU glu, float distance) {
+        // Change to projection matrix.
+        gl.glMatrixMode(GL2.GL_PROJECTION);
+        gl.glLoadIdentity();
 
+        // Perspective.
+        float widthHeightRatio = 1.5f;
+        //Два метода задания начальной точки
+
+        glu.gluPerspective(45, widthHeightRatio, 1, 1000); // через углы
+        glu.gluLookAt(0, 0, distance, 0, 0, 0, 0, 1, 0); // через точки
+        // Change back to model view matrix.
+        gl.glMatrixMode(GL2.GL_MODELVIEW);
+        gl.glLoadIdentity();
+    }
     public void display(GLAutoDrawable drawable) {
         synchronized(matrixLock) {
             ThisRot.get(matrix);
         }
 
         GL2 gl = drawable.getGL().getGL2();
-
+      //  setCamera(gl,glu, 10);
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);                // Clear Screen And Depth Buffer
 
         // Rotate The Cube On X, Y & Z
         gl.glLoadIdentity();                                                // Reset The Current Modelview Matrix
 
-//        shader.useShader(gl);
-//        int waveWidthLoc = gl.getGL2().glGetUniformLocation(shader.getShaderProgram(), "a");
-//        gl.getGL2().glUniform4fv(waveWidthLoc, 1, a, 0);
+    //    shader.useShader(gl);
+     //   int waveWidthLoc = gl.getGL2().glGetUniformLocation(shader.getShaderProgram(), "a");
+//       gl.getGL2().glUniform4fv(waveWidthLoc, 1, a, 0);
 
         gl.glTranslatef(0f, 0f, -6.0f);
         gl.glScalef(GLDisplay.scale, GLDisplay.scale, GLDisplay.scale);

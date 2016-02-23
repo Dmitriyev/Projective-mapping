@@ -13,7 +13,11 @@ public class Light {
     private static float[] diffuse = {1f, 1f, 1f, 1f};        // full diffuse colour
     private static float[] spec =    {1f, 0.6f, 0f, 1f}; // low ambient light
 
-    public static void setLight(GL2 gl) {
+    public static void setLight(GL2 gl, float x, float y, float z, float w) {
+        lightPos[0] = x;
+        lightPos[1] = y;
+        lightPos[2] = z;
+        lightPos[3] = w;
         gl.glEnable(GLLightingFunc.GL_LIGHTING);
         gl.glEnable(GLLightingFunc.GL_LIGHT0);
 
