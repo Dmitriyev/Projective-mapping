@@ -16,11 +16,13 @@ import javax.swing.JFileChooser;
 public class FileChooser {
 
     public File selectFile() {
-        File file = new File("defaultPath");
+        File file ;
         JFileChooser fileopen = new JFileChooser();
         int ret = fileopen.showDialog(null, "Выберите файл");
         if (ret == JFileChooser.APPROVE_OPTION) {
             file = fileopen.getSelectedFile();
+        } else {
+            file = new File ("config.txt");
         }
         return file;
     }

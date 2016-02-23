@@ -31,9 +31,9 @@ public class Renderer implements GLEventListener {
     private final Object matrixLock = new Object();
     private float[] matrix = new float[16];
 
-    public static int xProjectorCoord = 5;
-    public static int yProjectorCoord = 5;
-    public static int zProjectorCoord = 5;
+    public static float xProjectorCoord = 5;
+    public static float yProjectorCoord = 5;
+    public static float zProjectorCoord = 5;
 
     private ArcBall arcBall = new ArcBall(640.0f, 480.0f);
 
@@ -179,7 +179,7 @@ public class Renderer implements GLEventListener {
                 break;
         }
         gl.glPopMatrix();                                                    // NEW: Unapply Dynamic Transform
-
+        
         gl.glLoadIdentity();                                                // Reset The Current Modelview Matrix
 
         gl.glPushMatrix();                                                    // NEW: Prepare Dynamic Transform
