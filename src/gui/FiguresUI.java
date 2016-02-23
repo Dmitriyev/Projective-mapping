@@ -29,7 +29,6 @@ public class FiguresUI extends javax.swing.JFrame {
     public FiguresUI(GLCanvas glcanvas) {/*
         initComponents();
         Dimension sSize = Toolkit.getDefaultToolkit().getScreenSize();
-        glcanvas.setSize(sSize);
         this.getContentPane().add(glcanvas);
         this.setVisible(true);*/
 
@@ -39,6 +38,7 @@ public class FiguresUI extends javax.swing.JFrame {
         glcanvas.setSize(sSize.width - 150, sSize.height);
         this.getContentPane().add(glcanvas);
         this.setVisible(true);
+        this.pack();
     }
 
     /**

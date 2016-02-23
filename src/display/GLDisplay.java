@@ -48,6 +48,7 @@ public class GLDisplay {
         GLCapabilities glcapabilities = new GLCapabilities( glprofile );
         glCanvas = new GLCanvas( );
        // glCanvas.setSize(width,height);
+
         glCanvas.setIgnoreRepaint(true);
         glCanvas.addGLEventListener(helpOverlayGLEventListener);
 
@@ -61,9 +62,6 @@ public class GLDisplay {
                 }
             }
         });
-        /*frame = new JFrame(title);
-        frame.getContentPane().setLayout(new BorderLayout());
-        frame.getContentPane().add(glCanvas,BorderLayout.CENTER);*/
         frame = new FiguresUI(glCanvas);
 
         this.fullscreen = fullscreen;
@@ -79,7 +77,7 @@ public class GLDisplay {
     public void start() {
         try {
             Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-         //   frame.setUndecorated( fullscreen );
+          //  frame.setUndecorated( fullscreen );
 
             frame.addWindowListener( new MyWindowAdapter() );
 
