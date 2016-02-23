@@ -14,7 +14,7 @@ import java.awt.event.*;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
-
+import handlers.Main;
 /**
  * Created by Admin on 22.02.2016.
  */
@@ -37,13 +37,13 @@ public class GLDisplay {
     private MyExceptionHandler exceptionHandler = new MyExceptionHandler();
 
 
-    public static GLDisplay createGLDisplay( String title ) {
+    public static GLDisplay createGLDisplay( String title, handlers.Renderer renderer ) {
         GraphicsDevice device = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         boolean fullscreen = false;
-        return new GLDisplay(title,DEFAULT_WIDTH,DEFAULT_HEIGHT,fullscreen);
+        return new GLDisplay(title,DEFAULT_WIDTH,DEFAULT_HEIGHT,fullscreen,  renderer);
     }
 
-    private GLDisplay(String title, int width, int height, boolean fullscreen) {
+    private GLDisplay(String title, int width, int height, boolean fullscreen, handlers.Renderer renderer) {
         GLProfile glprofile = GLProfile.getDefault();
         GLCapabilities glcapabilities = new GLCapabilities( glprofile );
         glCanvas = new GLCanvas( );
@@ -62,7 +62,7 @@ public class GLDisplay {
                 }
             }
         });
-        frame = new FiguresUI(glCanvas);
+        frame = new FiguresUI(glCanvas, renderer);
 
         this.fullscreen = fullscreen;
         this.width = width;

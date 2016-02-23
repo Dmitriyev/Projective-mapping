@@ -7,8 +7,9 @@ import display.GLDisplay;
  */
 public class Main {
     public static void main(String[] args) {
-        GLDisplay neheGLDisplay = GLDisplay.createGLDisplay("TestTask");
+        
         Renderer renderer = new Renderer();
+        GLDisplay neheGLDisplay = GLDisplay.createGLDisplay("TestTask", renderer);
         InputHandler inputHandler = new InputHandler(renderer, neheGLDisplay);
         neheGLDisplay.addGLEventListener( renderer);
         neheGLDisplay.addMouseListener(inputHandler);

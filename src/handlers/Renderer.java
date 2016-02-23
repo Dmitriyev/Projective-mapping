@@ -32,10 +32,11 @@ public class Renderer implements GLEventListener {
     private float[] matrix = new float[16];
 
     public static ProjectiveTextureMapping shader = new ProjectiveTextureMapping();
-    //private float a[] = {0.5f, 0.05f, 0.05f, 1f};
+    
+//private float a[] = {0.5f, 0.05f, 0.05f, 1f};
 
 //    public static File projectorFile = new File("res\\Spotlight.jpg");
-
+    
     public static GL2 glOut;
 
     public static File projectorFile = new File("res\\Brkrun.jpg");

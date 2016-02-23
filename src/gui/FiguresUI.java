@@ -31,13 +31,14 @@ public class FiguresUI extends javax.swing.JFrame {
     /**
      * Creates new form FiguresUI
      */
-    public FiguresUI(GLCanvas glcanvas) {/*
+    handlers.Renderer render;
+    public FiguresUI(GLCanvas glcanvas,handlers.Renderer renderer) {/*
         initComponents();
         Dimension sSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.getContentPane().add(glcanvas);
         this.setVisible(true);*/
         gl = glcanvas;
-
+        render = renderer;
         initComponents();
         Dimension sSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setExtendedState(MAXIMIZED_BOTH);
@@ -70,7 +71,6 @@ public class FiguresUI extends javax.swing.JFrame {
         projectorFile = new javax.swing.JLabel();
         ProjectorSettings = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        configuration = new javax.swing.JRadioButton();
         byHands = new javax.swing.JRadioButton();
         projectorCoords = new javax.swing.JLabel();
         xCoordLabel = new javax.swing.JLabel();
@@ -139,14 +139,6 @@ public class FiguresUI extends javax.swing.JFrame {
 
         ProjectorSettings.setText("Настройки проектора:");
 
-        buttonGroup1.add(configuration);
-        configuration.setText("Конфигурация");
-        configuration.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                configurationActionPerformed(evt);
-            }
-        });
-
         buttonGroup1.add(byHands);
         byHands.setSelected(true);
         byHands.setText("Задать вручную");
@@ -208,7 +200,6 @@ public class FiguresUI extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(configuration)
                                     .addComponent(projectorCoords)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(zCoordLabel)
@@ -249,9 +240,7 @@ public class FiguresUI extends javax.swing.JFrame {
                                             .addComponent(v2xCoord, javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(v2zCoord)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(byHands, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(ProjectorSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(ProjectorSettings)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel6))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -273,7 +262,8 @@ public class FiguresUI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(projectorFileBtn)
-                            .addComponent(changeCoords))
+                            .addComponent(changeCoords)
+                            .addComponent(byHands, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -294,16 +284,11 @@ public class FiguresUI extends javax.swing.JFrame {
                 .addComponent(newSphereBtn)
                 .addGap(47, 47, 47)
                 .addComponent(ProjectorSettings)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(configuration)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel6))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(byHands)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(byHands)
+                .addGap(15, 15, 15)
+                .addComponent(jLabel6)
+                .addGap(8, 8, 8)
                 .addComponent(projectorCoords)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -368,10 +353,6 @@ public class FiguresUI extends javax.swing.JFrame {
     private void byHandsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byHandsActionPerformed
         setVisibleConfig(true);
     }//GEN-LAST:event_byHandsActionPerformed
-
-    private void configurationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configurationActionPerformed
-        setVisibleConfig(false);
-    }//GEN-LAST:event_configurationActionPerformed
 
     private void projectorFileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_projectorFileBtnActionPerformed
         boolean isByHands = buttonGroup1.isSelected(byHands.getModel());
@@ -446,11 +427,11 @@ public class FiguresUI extends javax.swing.JFrame {
         ProjectiveTextureMapping ptm = new ProjectiveTextureMapping();
         try {
             System.out.println(Float.parseFloat(v2xCoord.getText()));
-            Renderer.shader.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
+            render.shader.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
                     Float.parseFloat(zCoord.getText()), 1);
-            Renderer.shader.setf3LightUp(Float.parseFloat(v1xCoord.getText()), Float.parseFloat(v1yCoord.getText()),
+            render.shader.setf3LightUp(Float.parseFloat(v1xCoord.getText()), Float.parseFloat(v1yCoord.getText()),
                     Float.parseFloat(v1zCoord.getText()));
-            Renderer.shader.setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()),
+            render.shader.setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()),
                     Float.parseFloat(v2xCoord.getText()));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Введите корректные координаты");
@@ -489,7 +470,6 @@ public class FiguresUI extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JRadioButton byHands;
     private javax.swing.JButton changeCoords;
-    private javax.swing.JRadioButton configuration;
     private javax.swing.JButton cubeBtn;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
