@@ -446,11 +446,11 @@ public class FiguresUI extends javax.swing.JFrame {
         ProjectiveTextureMapping ptm = new ProjectiveTextureMapping();
         try {
             System.out.println(Float.parseFloat(v2xCoord.getText()));
-            ptm.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
+            Renderer.shader.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
                     Float.parseFloat(zCoord.getText()), 1);
-            ptm.setf3LightUp(Float.parseFloat(v1xCoord.getText()), Float.parseFloat(v1yCoord.getText()),
+            Renderer.shader.setf3LightUp(Float.parseFloat(v1xCoord.getText()), Float.parseFloat(v1yCoord.getText()),
                     Float.parseFloat(v1zCoord.getText()));
-            ptm.setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()),
+            Renderer.shader.setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()),
                     Float.parseFloat(v2xCoord.getText()));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Введите корректные координаты");
