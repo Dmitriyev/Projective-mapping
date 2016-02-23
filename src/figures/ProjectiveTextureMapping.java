@@ -1,5 +1,6 @@
 package figures;
 
+import com.jogamp.opengl.GL;
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLException;
 import com.jogamp.opengl.util.texture.Texture;
@@ -42,16 +43,16 @@ public class ProjectiveTextureMapping {
     private float Pd = 0.2f;
     private float Ps = 0.2f;
     private float Epsilon = 1f;
-    private float Shinnes = 0.2f;
+    private float Shinnes = 1f;
 
     private float[] v4AmbientColor = {0.2f, 0.2f, 0.2f, 1f};
-    private float[] v4DiffuseColor = {0.2f, 0.2f, 0.2f, 1f};
+    private float[] v4DiffuseColor = {0.5f, 0.5f, 0.5f, 1f};
     private float[] v4SpecularColor = {0.8f, 0.8f, 0.8f, 1f};
 
     //Projector position params
     //Use set<variable name>(float, float, float) to set this params
     private float[] fvLightPos = {2f, 2f, 2f, 1f};
-    private float[] f3LightDir = {0f, 0f, 0f};
+    private float[] f3LightDir = {1f, 1f, 1f};
     private float[] f3LightUp = {0f, 1f, 1f};
 
     private float[] vViewPosition = {0f, 0f, 1f, 1f};
@@ -59,18 +60,19 @@ public class ProjectiveTextureMapping {
     private Texture texture = null;
 
     public void setTexture(File inFile, GL2 gl) {
+
         try {
             texture = TextureIO.newTexture(inFile, true);
-            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MIN_FILTER,GL2.GL_LINEAR);
-            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER,GL2.GL_LINEAR);
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MIN_FILTER,GL2.GL_NEAREST);
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER,GL2.GL_NEAREST);
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_WRAP_S,GL2.GL_CLAMP);
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_WRAP_T,GL2.GL_CLAMP);
         } catch (GLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        gl.glEnable(GL2.GL_TEXTURE_2D);
-        gl.glMatrixMode(GL2.GL_TEXTURE);
         gl.glActiveTexture(GL2.GL_TEXTURE0);
         texture.bind(gl);
         //System.out.println(texture.getTextureObject() + "\n");
@@ -235,6 +237,8 @@ public class ProjectiveTextureMapping {
         gl.getGL2().glUniform3fv(uf3LightUp, 1, f3LightUp, 0);
 
         gl.getGL2().glUniform4fv(uvViewPosition, 1, vViewPosition, 0);
+
+        //gl.glBindTexture(GL.GL_TEXTURE_2D, 0);
         gl.getGL2().glUniform1i(uTexture0, 0);
     }
 }
