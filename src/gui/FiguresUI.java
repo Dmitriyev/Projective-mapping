@@ -365,7 +365,7 @@ public class FiguresUI extends javax.swing.JFrame {
         if (isByHands) {
             try {
                 ptm.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
-                                Float.parseFloat(zCoord.getText()), TOP_ALIGNMENT);
+                                Float.parseFloat(zCoord.getText()), 0);
                 ptm.setf3LightUp(Float.parseFloat(v1xCoord.getText()),Float.parseFloat(v1yCoord.getText()),
                                 Float.parseFloat(v1zCoord.getText()));
                 ptm.setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()), 
@@ -377,7 +377,7 @@ public class FiguresUI extends javax.swing.JFrame {
         } else {
             try {
                 ParseConfig parse = new ParseConfig(chooseFile.selectFile());
-                ptm.setfvLightPos(parse.getCOORDS()[0],parse.getCOORDS()[1],parse.getCOORDS()[2],TOP_ALIGNMENT);
+                ptm.setfvLightPos(parse.getCOORDS()[0],parse.getCOORDS()[1],parse.getCOORDS()[2],0);
                 ptm.setf3LightUp(parse.getVector1Coords()[0],parse.getVector1Coords()[1],parse.getVector1Coords()[2]);
                 ptm.setf3LightDir(parse.getVector2Coords()[0],parse.getVector2Coords()[1],parse.getVector2Coords()[2]);
             } catch (IOException ex) {

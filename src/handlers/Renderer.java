@@ -165,7 +165,7 @@ public class Renderer implements GLEventListener {
         //Два метода задания начальной точки
 
         glu.gluPerspective(45, widthHeightRatio, 1, 1000); // через углы
-        glu.gluLookAt(10, 10, distance, 0, 0, 0, 0, 1, 0); // через точки
+        glu.gluLookAt(0, 0, distance, 0, 0, 0, 0, 1, 0); // через точки
         // Change back to model view matrix.
         gl.glMatrixMode(GL2.GL_MODELVIEW);
         gl.glLoadIdentity();
