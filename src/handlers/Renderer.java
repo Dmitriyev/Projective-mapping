@@ -31,7 +31,7 @@ public class Renderer implements GLEventListener {
     private float[] matrix = new float[16];
 
     private ProjectiveTextureMapping shader = new ProjectiveTextureMapping();
-    private float[] a = {1f, 0f, 0f, 1};
+    //private float a[] = {0.5f, 0.05f, 0.05f, 1f};
     public static File projectorFile;
     public static int xProjectorCoord = 5;
     public static int yProjectorCoord = 5;
@@ -165,9 +165,9 @@ public class Renderer implements GLEventListener {
         // Rotate The Cube On X, Y & Z
         gl.glLoadIdentity();                                                // Reset The Current Modelview Matrix
 
-//        int waveWidthLoc = gl.glGetUniformLocation(a, "a");
-//        gl.glUniform1f(waveWidthLoc, a);
-        shader.useShader(gl);
+//        shader.useShader(gl);
+//        int waveWidthLoc = gl.getGL2().glGetUniformLocation(shader.getShaderProgram(), "a");
+//        gl.getGL2().glUniform4fv(waveWidthLoc, 1, a, 0);
 
         gl.glTranslatef(0f, 0f, -6.0f);
         gl.glScalef(GLDisplay.scale, GLDisplay.scale, GLDisplay.scale);
@@ -198,7 +198,7 @@ public class Renderer implements GLEventListener {
         gl.glColor3f(1.0f, 0.75f, 0.75f);
         gl.glPopMatrix();                                                    // NEW: Unapply Dynamic Transform
         gl.glEnd();
-        shader.dontUseShader(gl);
+//        shader.dontUseShader(gl);
         gl.glFlush();                                                        // Flush The GL Rendering Pipeline
     }
 }

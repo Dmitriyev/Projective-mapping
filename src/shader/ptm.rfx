@@ -979,7 +979,7 @@
       <RmRegistryBranch NAME="Effect Workspace.Effect Group 1.Position" API="" XML_VERSION="RenderMonkey 1.71">
        <RmRegistryBranch NAME="Disassembly" API="" XML_VERSION="RenderMonkey 1.71"/>
        <RmStringVariable NAME="Editing Shader" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-Vertex Program]]></RmTextDataBlock></RmStringVariable>
+Fragment Program]]></RmTextDataBlock></RmStringVariable>
        <RmStringVariable NAME="Editing Pass" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 Pass 0]]></RmTextDataBlock></RmStringVariable>
        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
@@ -1019,7 +1019,7 @@ Pass 0]]></RmTextDataBlock></RmStringVariable>
     </RmRegistryBranch>
     <RmRegistryBranch NAME="WORKSPACE" API="" XML_VERSION="RenderMonkey 1.71">
      <RmStringVariable NAME="LAST_SAVE" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-23/2/2016 0:13:54]]></RmTextDataBlock></RmStringVariable>
+23/2/2016 4:35:24]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 RenderMonkey Version 1.82 (build 322)]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="XML_VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
@@ -1037,10 +1037,10 @@ C:\Users\fzxg\IdeaProjects\Projective-mapping-master\src\shader\]]></RmTextDataB
     <RmFloatVariable NAME="Ps" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0.200000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
     <RmFloatVariable NAME="Epsilon" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
     <RmFloatVariable NAME="Shinnes" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
-    <RmVectorVariable NAME="v4AmbientColor" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="0.500000" VALUE_1="0.500000" VALUE_2="0.000000" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
-    <RmVectorVariable NAME="v4DiffuseColor" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="0.800000" VALUE_1="0.800000" VALUE_2="0.800000" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
-    <RmVectorVariable NAME="v4SpecularColor" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="0.200000" VALUE_1="0.200000" VALUE_2="0.200000" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
-    <RmVectorVariable NAME="vViewPosition" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="ViewPosition" VALUE_0="-10.983561" VALUE_1="17.945919" VALUE_2="-73.409500" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
+    <RmVectorVariable NAME="v4AmbientColor" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="0.200000" VALUE_1="0.200000" VALUE_2="0.200000" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
+    <RmVectorVariable NAME="v4DiffuseColor" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="0.200000" VALUE_1="0.200000" VALUE_2="0.200000" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
+    <RmVectorVariable NAME="v4SpecularColor" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="0.800000" VALUE_1="0.800000" VALUE_2="0.800000" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
+    <RmVectorVariable NAME="vViewPosition" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="ViewPosition" VALUE_0="-4.245029" VALUE_1="-62.949791" VALUE_2="62.321850" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
     <RmDynamicVariable NAME="f3LightDir" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VARIABLE_TYPE="FLOAT" ROWS="3" COLUMNS="1" FIXED_SIZE="TRUE" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE" NORMALIZE="FALSE">
      <RmDynamicVariableValueContainer>
       <RmDynamicVariableValue ROW_INDEX="0" COLUMN_INDEX="0" VALUE="0.000000"/>
@@ -1052,7 +1052,7 @@ C:\Users\fzxg\IdeaProjects\Projective-mapping-master\src\shader\]]></RmTextDataB
      <RmDynamicVariableValueContainer>
       <RmDynamicVariableValue ROW_INDEX="0" COLUMN_INDEX="0" VALUE="1.000000"/>
       <RmDynamicVariableValue ROW_INDEX="1" COLUMN_INDEX="0" VALUE="1.000000"/>
-      <RmDynamicVariableValue ROW_INDEX="2" COLUMN_INDEX="0" VALUE="1.000000"/>
+      <RmDynamicVariableValue ROW_INDEX="2" COLUMN_INDEX="0" VALUE="-1.000000"/>
      </RmDynamicVariableValueContainer>
     </RmDynamicVariable>
     <RmVectorVariable NAME="vViewUp" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="ViewUpVector" VALUE_0="0.000000" VALUE_1="0.000000" VALUE_2="0.000000" VALUE_3="1.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
@@ -1064,7 +1064,7 @@ C:\Users\fzxg\IdeaProjects\Projective-mapping-master\src\shader\]]></RmTextDataB
       <RmStreamChannel NAME="TexCoord_0" API="" DATA_SIZE="8" DATA_TYPE="1" REGISTER="0" USAGE="5" USAGE_INDEX="0" ATTRIBUTE_NAME="rm_TexCoord0"/>
      </RmStream>
     </RmStreamMap>
-    <RmModelData NAME="Model" API="" FILE_NAME="..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Models\Teapot.3ds" ORIENTATION="0"/>
+    <RmModelData NAME="Model" API="" FILE_NAME="..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Models\Sphere.x" ORIENTATION="0"/>
     <RmGLPass NAME="Pass 0" API="OpenGL" PASS_INDEX="0" ENABLED="TRUE">
      <RmModelReference NAME="Model" API=""/>
      <RmGLShader NAME="Vertex Program" API="OpenGL" PIXEL_SHADER="FALSE"><RmShaderCode TYPE="TEXT"><![CDATA[
@@ -1181,7 +1181,7 @@ void main(void)
    gl_FragColor = fragColor;
 }]]></RmShaderCode></RmGLShader>
      <RmStreamMapReference NAME="Stream Mapping" API=""/>
-     <Rm2DTextureVariable NAME="Texture0" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Textures\Spotlight.jpg" ORIGIN="0"/>
+     <Rm2DTextureVariable NAME="Texture0" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME="..\..\..\..\..\..\Program Files (x86)\AMD\RenderMonkey 1.82\Examples\Media\Textures\Coin.dds" ORIGIN="0"/>
      <RmTextureObject NAME="Texture0" API="OpenGL" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
       <RmTextureReference NAME="Texture0" API=""/>
      </RmTextureObject>
