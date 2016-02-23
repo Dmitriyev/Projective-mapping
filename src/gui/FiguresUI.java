@@ -337,7 +337,7 @@ public class FiguresUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 1144, Short.MAX_VALUE)
+                .addGap(0, 1141, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -359,30 +359,10 @@ public class FiguresUI extends javax.swing.JFrame {
         ProjectiveTextureMapping ptm = new ProjectiveTextureMapping();
         FileChooser chooseFile = new FileChooser();
         if (isByHands) {
-            ptm.setTexture(chooseFile.selectFile(), Renderer.glOut);
-            try {
-                System.out.println(Float.parseFloat(xCoord.getText()));
-                ptm.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
-                        Float.parseFloat(zCoord.getText()), 0);
-                ptm.setf3LightUp(Float.parseFloat(v1xCoord.getText()), Float.parseFloat(v1yCoord.getText()),
-                        Float.parseFloat(v1zCoord.getText()));
-                ptm.setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()),
-                        Float.parseFloat(v2xCoord.getText()));
-                // Renderer.projectorFile = chooseFile.selectFile();
-
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Введите корректные координаты");
-            }
-        } else {
-            try {
-                ParseConfig parse = new ParseConfig(chooseFile.selectFile());
-                ptm.setfvLightPos(parse.getCOORDS()[0], parse.getCOORDS()[1], parse.getCOORDS()[2], 0);
-                ptm.setf3LightUp(parse.getVector1Coords()[0], parse.getVector1Coords()[1], parse.getVector1Coords()[2]);
-                ptm.setf3LightDir(parse.getVector2Coords()[0], parse.getVector2Coords()[1], parse.getVector2Coords()[2]);
-                ptm.setTexture(new File(parse.getPath()), Renderer.glOut);
-            } catch (IOException ex) {
-                Logger.getLogger(FiguresUI.class.getName()).log(Level.SEVERE, null, ex);
-            }
+           render.glOut.getContext().makeCurrent();
+           render.shader.setTexture(chooseFile.selectFile(), render.glOut);
+           
+        
         }
     }//GEN-LAST:event_projectorFileBtnActionPerformed
 
