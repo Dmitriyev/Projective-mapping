@@ -1,6 +1,6 @@
 uniform vec4 fvLightPos;
 uniform vec4 vViewPosition;
-uniform mat4 matWorldInverse;
+//uniform mat4 matWorldInverse;
 uniform vec3 f3LightDir;
 uniform vec3 f3LightUp;
 
@@ -48,6 +48,12 @@ mat4 glPerspective( float fovy, float aspect, float zNear, float zFar ){
 
 void main(void)
 {   
+   mat4 matWorldInverse = mat4(
+                               1.0, 0.0, 0.0, 0.0,
+                               0.0, 1.0, 0.0, 0.0,
+                               0.0, 0.0, 1.0, 0.0,
+                               0.0, 0.0, 0.0, 1.0
+                               );
    gl_Position = ftransform();
    
    vec4 v4Vertex = gl_ModelViewMatrix * gl_Vertex;

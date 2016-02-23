@@ -32,8 +32,7 @@ void main(void)
 
    vec4 fragColor = (v4CAmbientColor + v4CDefuseColor + v4CSpecularColor);
    
-   //if(v4TextureCoord.w > 0.0)
-      fragColor += texture2D( Texture0, texCoord) * Epsilon;
+   fragColor += texture2D( Texture0, texCoord) * Epsilon;
       
    gl_FragColor = fragColor;
 }

@@ -31,13 +31,9 @@ public class Renderer implements GLEventListener {
     private final Object matrixLock = new Object();
     private float[] matrix = new float[16];
 
-    public static float xProjectorCoord = 5;
-    public static float yProjectorCoord = 5;
-    public static float zProjectorCoord = 5;
-
     private ProjectiveTextureMapping shader = new ProjectiveTextureMapping();
     //private float a[] = {0.5f, 0.05f, 0.05f, 1f};
-    public static File projectorFile;
+    public static File projectorFile = new File("res\\Spotlight.jpg");
 
 
     private ArcBall arcBall = new ArcBall(640.0f, 480.0f);
@@ -84,9 +80,10 @@ public class Renderer implements GLEventListener {
         //    Floor.drawFloor(gl);
 
 
-        shader.fsrc = shader.loadShader("src\\shader\\f.txt"); // fragment GLSL Code
-        shader.vsrc = shader.loadShader("src\\shader\\v.txt"); // vertex GLSL Code
+        shader.fsrc = shader.loadShader("src\\shader\\fp0.frag"); // fragment GLSL Code
+        shader.vsrc = shader.loadShader("src\\shader\\vp0.vert"); // vertex GLSL Code
         shader.init(gl);
+        shader.setTexture(projectorFile, gl);
     }
 
     @Override
@@ -103,7 +100,7 @@ public class Renderer implements GLEventListener {
 
     void startDrag( Point MousePt ) {
         synchronized(matrixLock) {
-            LastRot.set( ThisRot );                                        // Set Last Static Rotation To Last Dynamic One
+            LastRot.set(ThisRot);                                        // Set Last Static Rotation To Last Dynamic One
         }
         arcBall.click( MousePt );                                 // Update Start Vector And Prepare For Dragging
     }
@@ -112,7 +109,7 @@ public class Renderer implements GLEventListener {
     {
         Quat4f ThisQuat = new Quat4f();
 
-        arcBall.drag( MousePt, ThisQuat);                         // Update End Vector And Get Rotation As Quaternion
+        arcBall.drag(MousePt, ThisQuat);                         // Update End Vector And Get Rotation As Quaternion
         synchronized(matrixLock) {
             ThisRot.setRotation(ThisQuat);     // Convert Quaternion Into Matrix3fT
             ThisRot.mul( ThisRot, LastRot);                // Accumulate Last Rotation Into This One
@@ -165,7 +162,10 @@ public class Renderer implements GLEventListener {
         //Два метода задания начальной точки
 
         glu.gluPerspective(45, widthHeightRatio, 1, 1000); // через углы
-        glu.gluLookAt(0, 0, distance, 0, 0, 0, 0, 1, 0); // через точки
+        float var1 = 0;
+        float var2 = 0;
+        glu.gluLookAt(var1, var2, distance, 0, 0, 0, 0, 1, 0); // через точки
+        shader.setvViewPosition(var1, var2, distance, 1f);
         // Change back to model view matrix.
         gl.glMatrixMode(GL2.GL_MODELVIEW);
         gl.glLoadIdentity();
@@ -176,15 +176,14 @@ public class Renderer implements GLEventListener {
         }
 
         GL2 gl = drawable.getGL().getGL2();
-        setCamera(gl,glu, 10);
+        setCamera(gl, glu, 10);
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);                // Clear Screen And Depth Buffer
 
         // Rotate The Cube On X, Y & Z
         gl.glLoadIdentity();                                                // Reset The Current Modelview Matrix
 
-    //    shader.useShader(gl);
-     //   int waveWidthLoc = gl.getGL2().glGetUniformLocation(shader.getShaderProgram(), "a");
-//       gl.getGL2().glUniform4fv(waveWidthLoc, 1, a, 0);
+        shader.useShader(gl);
+        shader.setParams(gl);
 
         gl.glTranslatef(0f, 0f, -6.0f);
         gl.glScalef(GLDisplay.scale, GLDisplay.scale, GLDisplay.scale);
@@ -215,7 +214,7 @@ public class Renderer implements GLEventListener {
         gl.glColor3f(1.0f, 0.75f, 0.75f);
         gl.glPopMatrix();                                                    // NEW: Unapply Dynamic Transform
         gl.glEnd();
-//        shader.dontUseShader(gl);
+        shader.dontUseShader(gl);
         gl.glFlush();                                                        // Flush The GL Rendering Pipeline
     }
 }

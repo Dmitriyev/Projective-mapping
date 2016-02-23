@@ -1,9 +1,14 @@
 package figures;
 
 import com.jogamp.opengl.GL2;
+import com.jogamp.opengl.GLException;
+import com.jogamp.opengl.util.texture.Texture;
+import com.jogamp.opengl.util.texture.TextureIO;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.nio.IntBuffer;
 import java.nio.ByteBuffer;
 
@@ -28,7 +33,7 @@ public class ProjectiveTextureMapping {
     private int uv4DiffuseColor;
     private int uv4SpecularColor;
     private int uvViewPosition;
-    private int umatWorldInverse;
+    //private int umatWorldInverse;
     private int uTexture0;
 
     //Uniform variables
@@ -45,9 +50,31 @@ public class ProjectiveTextureMapping {
 
     //Projector position params
     //Use set<variable name>(float, float, float) to set this params
-    private float[] fvLightPos = {0f, 0f, 2f, 1f};
+    private float[] fvLightPos = {2f, 2f, 2f, 1f};
     private float[] f3LightDir = {0f, 0f, 0f};
     private float[] f3LightUp = {0f, 1f, 1f};
+
+    private float[] vViewPosition = {0f, 0f, 1f, 1f};
+
+    private Texture texture = null;
+
+    public void setTexture(File inFile, GL2 gl) {
+        try {
+            texture = TextureIO.newTexture(inFile, true);
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MIN_FILTER,GL2.GL_LINEAR);
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER,GL2.GL_LINEAR);
+        } catch (GLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        gl.glEnable(GL2.GL_TEXTURE_2D);
+        gl.glMatrixMode(GL2.GL_TEXTURE);
+        gl.glActiveTexture(GL2.GL_TEXTURE0);
+        texture.bind(gl);
+        //System.out.println(texture.getTextureObject() + "\n");
+    }
 
     public void setfvLightPos(float x, float y, float z, float w) {
         fvLightPos[0]  = x;
@@ -55,16 +82,25 @@ public class ProjectiveTextureMapping {
         fvLightPos[2]  = z;
         fvLightPos[3]  = w;
     }
+
     public void setf3LightDir(float x, float y, float z) {
         f3LightDir[0]  = x;
         f3LightDir[1]  = y;
         f3LightDir[2]  = z;
     }
+
     public void setf3LightUp(float x, float y, float z) {
         f3LightUp[0]  = x;
         f3LightUp[1]  = y;
         f3LightUp[2]  = z;
-    } 
+    }
+
+    public void setvViewPosition(float x, float y, float z, float w) {
+        vViewPosition[0]  = x;
+        vViewPosition[1]  = y;
+        vViewPosition[2]  = z;
+        vViewPosition[3]  = w;
+    }
 
     public int getShaderProgram() {return shaderprogram;}
 
@@ -95,7 +131,7 @@ public class ProjectiveTextureMapping {
         uv4DiffuseColor = gl.getGL2().glGetUniformLocation(shaderprogram, "v4DiffuseColor");
         uv4SpecularColor = gl.getGL2().glGetUniformLocation(shaderprogram, "v4SpecularColor");
         uvViewPosition = gl.getGL2().glGetUniformLocation(shaderprogram, "vViewPosition");
-        umatWorldInverse = gl.getGL2().glGetUniformLocation(shaderprogram, "matWorldInverse");
+        //umatWorldInverse = gl.getGL2().glGetUniformLocation(shaderprogram, "matWorldInverse");
         uTexture0 = gl.getGL2().glGetUniformLocation(shaderprogram, "Texture0");
     }
     // loads the shaders
@@ -198,6 +234,7 @@ public class ProjectiveTextureMapping {
         gl.getGL2().glUniform3fv(uf3LightDir, 1, f3LightDir, 0);
         gl.getGL2().glUniform3fv(uf3LightUp, 1, f3LightUp, 0);
 
-        //gl.getGL2().glUniform4fv(uvViewPosition, 1, gl.glg, 0);
+        gl.getGL2().glUniform4fv(uvViewPosition, 1, vViewPosition, 0);
+        gl.getGL2().glUniform1i(uTexture0, 0);
     }
 }

@@ -1,6 +1,0 @@
-uniform vec4 a;
-
-void main (void)  
-{     
-   gl_FragColor = a;  
-}  
