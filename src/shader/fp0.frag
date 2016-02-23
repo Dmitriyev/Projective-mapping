@@ -1,5 +1,3 @@
-
-
 uniform float Pa;
 uniform float Pd;
 uniform float Ps;
@@ -7,15 +5,16 @@ uniform float Shinnes;
 uniform vec4 v4AmbientColor;
 uniform vec4 v4DiffuseColor;
 uniform vec4 v4SpecularColor;
+uniform float Epsilon;
+uniform sampler2D Texture0;
 
 varying vec3 v4Normal;
 varying vec3 v4Eye;
 varying vec3 v4Light;
 varying vec3 v4ReflectVec;
 
-uniform sampler2D Texture0;
 varying vec4 v4TextureCoord;
-uniform float Epsilon;
+
 
 void main(void)
 {
