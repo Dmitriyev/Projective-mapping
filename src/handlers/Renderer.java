@@ -31,8 +31,11 @@ public class Renderer implements GLEventListener {
     private final Object matrixLock = new Object();
     private float[] matrix = new float[16];
 
-    public static ProjectiveTextureMapping shader = new ProjectiveTextureMapping();
+    private ProjectiveTextureMapping shader = new ProjectiveTextureMapping();
     
+    public ProjectiveTextureMapping getShader() {
+        return shader;
+}
 //private float a[] = {0.5f, 0.05f, 0.05f, 1f};
 
 //    public static File projectorFile = new File("res\\Spotlight.jpg");

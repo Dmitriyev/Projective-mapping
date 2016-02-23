@@ -360,9 +360,18 @@ public class FiguresUI extends javax.swing.JFrame {
         FileChooser chooseFile = new FileChooser();
         if (isByHands) {
            render.glOut.getContext().makeCurrent();
-           render.shader.setTexture(chooseFile.selectFile(), render.glOut);
+           render.getShader().setTexture(chooseFile.selectFile(), render.glOut);
            
-        
+        } else {
+            try {
+                ParseConfig parse = new ParseConfig(chooseFile.selectFile());
+                ptm.setfvLightPos(parse.getCOORDS()[0], parse.getCOORDS()[1], parse.getCOORDS()[2], 0);
+                ptm.setf3LightUp(parse.getVector1Coords()[0], parse.getVector1Coords()[1], parse.getVector1Coords()[2]);
+                ptm.setf3LightDir(parse.getVector2Coords()[0], parse.getVector2Coords()[1], parse.getVector2Coords()[2]);
+                ptm.setTexture(new File(parse.getPath()), Renderer.glOut);
+            } catch (IOException ex) {
+                Logger.getLogger(FiguresUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_projectorFileBtnActionPerformed
 
@@ -407,11 +416,11 @@ public class FiguresUI extends javax.swing.JFrame {
         ProjectiveTextureMapping ptm = new ProjectiveTextureMapping();
         try {
             System.out.println(Float.parseFloat(v2xCoord.getText()));
-            render.shader.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
+            render.getShader().setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
                     Float.parseFloat(zCoord.getText()), 1);
-            render.shader.setf3LightUp(Float.parseFloat(v1xCoord.getText()), Float.parseFloat(v1yCoord.getText()),
+            render.getShader().setf3LightUp(Float.parseFloat(v1xCoord.getText()), Float.parseFloat(v1yCoord.getText()),
                     Float.parseFloat(v1zCoord.getText()));
-            render.shader.setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()),
+            render.getShader().setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()),
                     Float.parseFloat(v2xCoord.getText()));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Введите корректные координаты");
