@@ -35,12 +35,12 @@ public class Renderer implements GLEventListener {
     //private float a[] = {0.5f, 0.05f, 0.05f, 1f};
     public static File projectorFile = new File("res\\Spotlight.jpg");
 
-
+    public static GL2 glOut;
     private ArcBall arcBall = new ArcBall(640.0f, 480.0f);
 
     public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
         GL2 gl = drawable.getGL().getGL2();
-
+        
         gl.glViewport(0, 0, width, height);                // Reset The Current Viewport
         gl.glMatrixMode(GL2.GL_PROJECTION);                                        // Select The Projection Matrix
         gl.glLoadIdentity();                                                    // Reset The Projection Matrix
@@ -58,7 +58,7 @@ public class Renderer implements GLEventListener {
 
     public void init(GLAutoDrawable drawable) {
         GL2 gl = drawable.getGL().getGL2();
-
+        glOut = gl;
         // Start Of User Initialization
         LastRot.setIdentity();                                // Reset Rotation
         ThisRot.setIdentity();                                // Reset Rotation

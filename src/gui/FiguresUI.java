@@ -36,7 +36,8 @@ public class FiguresUI extends javax.swing.JFrame {
         Dimension sSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.getContentPane().add(glcanvas);
         this.setVisible(true);*/
-
+        gl = glcanvas;
+        
         initComponents();
         Dimension sSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setExtendedState(MAXIMIZED_BOTH);
@@ -363,6 +364,8 @@ public class FiguresUI extends javax.swing.JFrame {
         ProjectiveTextureMapping ptm = new ProjectiveTextureMapping();
         FileChooser chooseFile = new FileChooser();
         if (isByHands) {
+            System.out.println(chooseFile.selectFile().getName());
+            ptm.setTexture(chooseFile.selectFile(),Renderer.glOut);
             try {
                 ptm.setfvLightPos(Float.parseFloat(xCoord.getText()), Float.parseFloat(yCoord.getText()),
                                 Float.parseFloat(zCoord.getText()), 0);
@@ -370,7 +373,8 @@ public class FiguresUI extends javax.swing.JFrame {
                                 Float.parseFloat(v1zCoord.getText()));
                 ptm.setf3LightDir(Float.parseFloat(v2xCoord.getText()), Float.parseFloat(v2xCoord.getText()), 
                         Float.parseFloat(v2xCoord.getText()));
-                Renderer.projectorFile = chooseFile.selectFile();
+               // Renderer.projectorFile = chooseFile.selectFile();
+                
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Введите корректные координаты");
             }
@@ -380,6 +384,7 @@ public class FiguresUI extends javax.swing.JFrame {
                 ptm.setfvLightPos(parse.getCOORDS()[0],parse.getCOORDS()[1],parse.getCOORDS()[2],0);
                 ptm.setf3LightUp(parse.getVector1Coords()[0],parse.getVector1Coords()[1],parse.getVector1Coords()[2]);
                 ptm.setf3LightDir(parse.getVector2Coords()[0],parse.getVector2Coords()[1],parse.getVector2Coords()[2]);
+                ptm.setTexture(new File(parse.getPath()),Renderer.glOut);
             } catch (IOException ex) {
                 Logger.getLogger(FiguresUI.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -446,7 +451,7 @@ public class FiguresUI extends javax.swing.JFrame {
         v2zCoord.setVisible(isVisible);
         anglesCoords.setVisible(isVisible);
     }
-
+    private static GLCanvas gl;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ProjectorSettings;
     private javax.swing.JLabel anglesCoords;
