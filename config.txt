@@ -1,3 +1,4 @@
-FIGURE = PYRAMID
-COORDS = 1.0;1.0;3.5333
+ProjectorCoords = 1.0;1.0;3.5333
 PATH = "C:/Image.jpg"
+Vector1Coords = 5.0;3.0;123.421
+Vector2Coords = 124.4;321.4;4321.3

@@ -31,12 +31,14 @@ public class Renderer implements GLEventListener {
     private final Object matrixLock = new Object();
     private float[] matrix = new float[16];
 
+    public static float xProjectorCoord = 5;
+    public static float yProjectorCoord = 5;
+    public static float zProjectorCoord = 5;
+
     private ProjectiveTextureMapping shader = new ProjectiveTextureMapping();
     //private float a[] = {0.5f, 0.05f, 0.05f, 1f};
     public static File projectorFile;
-    public static int xProjectorCoord = 5;
-    public static int yProjectorCoord = 5;
-    public static int zProjectorCoord = 5;
+
 
     private ArcBall arcBall = new ArcBall(640.0f, 480.0f);
 
@@ -205,7 +207,7 @@ public class Renderer implements GLEventListener {
                 break;
         }
         gl.glPopMatrix();                                                    // NEW: Unapply Dynamic Transform
-
+        
         gl.glLoadIdentity();                                                // Reset The Current Modelview Matrix
 
         gl.glPushMatrix();                                                    // NEW: Prepare Dynamic Transform

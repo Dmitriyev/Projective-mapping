@@ -49,7 +49,22 @@ public class ProjectiveTextureMapping {
     private float[] f3LightDir = {0f, 0f, 0f};
     private float[] f3LightUp = {0f, 1f, 1f};
 
-
+    public void setfvLightPos(float x, float y, float z, float w) {
+        fvLightPos[0]  = x;
+        fvLightPos[1]  = y;
+        fvLightPos[2]  = z;
+        fvLightPos[3]  = w;
+    }
+    public void setf3LightDir(float x, float y, float z) {
+        f3LightDir[0]  = x;
+        f3LightDir[1]  = y;
+        f3LightDir[2]  = z;
+    }
+    public void setf3LightUp(float x, float y, float z) {
+        f3LightUp[0]  = x;
+        f3LightUp[1]  = y;
+        f3LightUp[2]  = z;
+    } 
 
     public int getShaderProgram() {return shaderprogram;}
 

@@ -11,32 +11,52 @@ import java.util.Properties;
  * @author nikita
  */
 public class ParseConfig {
-    private static String FIGURE;
-    private static double[] COORDS;
-    private static String PATH;
-    
-    public ParseConfig () throws IOException {
+
+    private float[] projectorCoords;
+    private String PATH;
+    private float[] vector1Coords;
+    private float[] vector2Coords;
+    public ParseConfig (File configFile) throws IOException {
         Properties props = new Properties();
-        File fl = new File("config.txt");
-        props.load(new FileInputStream(new File("config.txt")));
+        //File fl = new File("config.txt");
+       
+        props.load(new FileInputStream(configFile));
         
-        FIGURE = props.getProperty("FIGURE", "CUBE");
+
         PATH = props.getProperty("PATH", "images/img.jpg");
-        
-        String[] parts = props.getProperty("COORDS").split(";");
-        COORDS = new double[parts.length];
+         
+        String[] parts = props.getProperty("ProjectorCoords").split(";");
+        projectorCoords = new float[parts.length];
         for (int i = 0; i < parts.length; ++i)
 	{
-            COORDS[i] = Double.valueOf(parts[i]);
+            projectorCoords[i] = Float.valueOf(parts[i]);
 	}
-    }
-    public String getFigure() {
-        return FIGURE;
+       
+        parts = props.getProperty("Vector1Coords").split(";");
+        vector1Coords = new float[parts.length];
+        for (int i = 0; i < parts.length; ++i)
+	{
+            vector1Coords[i] = Float.valueOf(parts[i]);
+	}
+
+        parts = props.getProperty("Vector2Coords").split(";");
+        vector2Coords = new float[parts.length];
+        for (int i = 0; i < parts.length; ++i)
+	{
+            vector2Coords[i] = Float.valueOf(parts[i]);
+	}
     }
     public String getPath() {
         return PATH;
     }    
-    public double[] getCOORDS() {
-        return COORDS;
+    public float[] getCOORDS() {
+        return projectorCoords;
     }
+    public float[] getVector1Coords() {
+        return vector1Coords;
+    }
+    public float[] getVector2Coords() {
+        return vector2Coords;
+    }
+    
 }

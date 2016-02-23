@@ -36,8 +36,8 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="1141" max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" pref="159" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="1153" max="32767" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,61 +56,92 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="selectFigureLabel" max="32767" attributes="0"/>
-                              <Component id="sphereParamsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="sphereParams" min="-2" pref="85" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="pyramidBtn" alignment="0" max="32767" attributes="0"/>
-                              <Component id="cubeBtn" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="projectorFile" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Component id="configuration" min="-2" max="-2" attributes="0"/>
+                              <Component id="projectorCoords" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="zCoordLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="configuration" min="-2" max="-2" attributes="0"/>
-                                      <Component id="newSphereBtn" min="-2" max="-2" attributes="0"/>
-                                      <Component id="projectorCoords" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="zCoordLabel" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="zCoord" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="yCoordLabel" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="xCoordLabel" alignment="0" max="32767" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="xCoord" pref="45" max="32767" attributes="0"/>
-                                                  <Component id="yCoord" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <Component id="projectorFileBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="anglesCoords" min="-2" max="-2" attributes="0"/>
+                                      <Component id="zCoord" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="yCoordLabel" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="xCoordLabel" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="xCoord" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Component id="yCoord" min="-2" pref="45" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="byHands" max="32767" attributes="0"/>
-                                              <Component id="ProjectorSettings" alignment="1" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="v1xLabel" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                          <Component id="v1xCoord" min="-2" pref="36" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="v1yLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="v1yCoord" min="-2" pref="36" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="v1zLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="v1zCoord" min="-2" pref="36" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="v2yLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="v2zLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="v2xLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="v2yCoord" alignment="0" pref="36" max="32767" attributes="0"/>
+                                      <Component id="v2xCoord" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="v2zCoord" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Component id="projectorFile" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="byHands" max="32767" attributes="0"/>
+                                      <Component id="ProjectorSettings" alignment="1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="newSphereBtn" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="selectFigureLabel" max="32767" attributes="0"/>
+                                          <Component id="sphereParamsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="sphereParams" min="-2" pref="85" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="pyramidBtn" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cubeBtn" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace pref="21" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="projectorFileBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -164,11 +195,38 @@
                       <Component id="zCoordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="zCoord" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                  <Component id="anglesCoords" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="v1yLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="v1yCoord" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="v2yLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="v2yCoord" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="v1zLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="v2zLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="v2zCoord" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="v1zCoord" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="v2xLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="v1xCoord" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="v2xCoord" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="v1xLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="projectorFile" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="projectorFileBtn" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="563" max="32767" attributes="0"/>
+                  <EmptySpace pref="456" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -281,8 +339,61 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="yCoord">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="yCoordActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="zCoord">
+        </Component>
+        <Component class="javax.swing.JLabel" name="anglesCoords">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43e;&#x440;&#x434;&#x438;&#x43d;&#x430;&#x442;&#x44b; &#x443;&#x433;&#x43b;&#x43e;&#x432;:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="v1xLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="x1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="v1yLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="y1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="v1zLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="z1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="v1xCoord">
+        </Component>
+        <Component class="javax.swing.JTextField" name="v1yCoord">
+        </Component>
+        <Component class="javax.swing.JTextField" name="v1zCoord">
+        </Component>
+        <Component class="javax.swing.JLabel" name="v2xLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="x2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="v2yLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="y2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="v2zLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="z2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="v2xCoord">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="v2xCoordActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="v2yCoord">
+        </Component>
+        <Component class="javax.swing.JTextField" name="v2zCoord">
         </Component>
       </SubComponents>
     </Container>
