@@ -23,7 +23,6 @@ public class Renderer implements GLEventListener {
     private float radius = 1.0f;
     public static int longs = 100;
     public static int lats = 100;
-    public static File projectorFile;
     public static File configFile;
 
     private Matrix4f LastRot = new Matrix4f();
@@ -31,6 +30,9 @@ public class Renderer implements GLEventListener {
     private final Object matrixLock = new Object();
     private float[] matrix = new float[16];
 
+    private ProjectiveTextureMapping shader = new ProjectiveTextureMapping();
+    private float[] a = {1f, 0f, 0f, 1};
+    public static File projectorFile;
     public static int xProjectorCoord = 5;
     public static int yProjectorCoord = 5;
     public static int zProjectorCoord = 5;
@@ -78,6 +80,10 @@ public class Renderer implements GLEventListener {
         gl.glEnable(GL2.GL_COLOR_MATERIAL);                                    // Enable Color Material
         //    Floor.drawFloor(gl);
 
+
+        shader.fsrc = shader.loadShader("src\\shader\\f.txt"); // fragment GLSL Code
+        shader.vsrc = shader.loadShader("src\\shader\\v.txt"); // vertex GLSL Code
+        shader.init(gl);
     }
 
     @Override
@@ -159,6 +165,10 @@ public class Renderer implements GLEventListener {
         // Rotate The Cube On X, Y & Z
         gl.glLoadIdentity();                                                // Reset The Current Modelview Matrix
 
+//        int waveWidthLoc = gl.glGetUniformLocation(a, "a");
+//        gl.glUniform1f(waveWidthLoc, a);
+        shader.useShader(gl);
+
         gl.glTranslatef(0f, 0f, -6.0f);
         gl.glScalef(GLDisplay.scale, GLDisplay.scale, GLDisplay.scale);
         gl.glPushMatrix();                                                    // NEW: Prepare Dynamic Transform
@@ -188,6 +198,7 @@ public class Renderer implements GLEventListener {
         gl.glColor3f(1.0f, 0.75f, 0.75f);
         gl.glPopMatrix();                                                    // NEW: Unapply Dynamic Transform
         gl.glEnd();
+        shader.dontUseShader(gl);
         gl.glFlush();                                                        // Flush The GL Rendering Pipeline
     }
 }
