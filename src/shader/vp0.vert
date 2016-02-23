@@ -1,9 +1,6 @@
-
 uniform vec4 fvLightPos;
 uniform vec4 vViewPosition;
-uniform mat4 mViewInv;
-uniform mat4 mProj;
-uniform vec4 vViewUp;
+uniform mat4 matWorldInverse;
 uniform vec3 f3LightDir;
 uniform vec3 f3LightUp;
 
@@ -63,12 +60,13 @@ void main(void)
    mat4 m4lightView = glLookAt(fvLightPos.xyz, f3LightDir, f3LightUp );
    mat4 m4lightProj = glPerspective( 45.0, 1.0, fvLightPos.z, 1.0 );
    
-  mat4 S = mat4(
+   mat4 S = mat4(
                   0.5, 0.0, 0.0, 0.0,
                   0.0, 0.5, 0.0, 0.0,
                   0.0, 0.0, 0.5, 0.0,
                   0.5, 0.5, 0.5, 1.0
                 );
-   mat4 M = mViewInv * gl_ModelViewMatrix;
+
+   mat4 M = matWorldInverse * gl_ModelViewMatrix;
    v4TextureCoord = S * m4lightProj * m4lightView * M * gl_Vertex;
 }
